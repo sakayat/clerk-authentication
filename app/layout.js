@@ -13,7 +13,16 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<ClerkProvider>
+			<ClerkProvider appearance={{
+				layout: {
+          logoImageUrl: "https://clerk.dev/logo.png",
+          logoPlacement: "inside",
+          showOptionalFields: true,
+          socialButtonsPlacement: "bottom",
+          socialButtonsVariant: "iconButton",
+					
+				}
+			}}>
 				<body className={inter.className}>
 					<Navbar />
 					{children}
